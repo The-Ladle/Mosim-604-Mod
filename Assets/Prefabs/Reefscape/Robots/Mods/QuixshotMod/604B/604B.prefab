@@ -10091,7 +10091,7 @@ ConfigurableJoint:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 2068072173112283351}
   serializedVersion: 4
-  m_ConnectedBody: {fileID: 5865227791931682013}
+  m_ConnectedBody: {fileID: 8921164627416285410}
   m_ConnectedArticulationBody: {fileID: 0}
   m_Anchor: {x: 0, y: 0, z: 0}
   m_Axis: {x: 1, y: 0, z: 0}
@@ -12661,7 +12661,6 @@ GameObject:
   - component: {fileID: -4717869558092279391}
   - component: {fileID: 6699703931475903775}
   - component: {fileID: 7096312542662481758}
-  - component: {fileID: 8024107007445086517}
   - component: {fileID: 2903388397744750583}
   m_Layer: 6
   m_Name: 604B
@@ -12965,7 +12964,7 @@ MonoBehaviour:
   superCycler: 0
   shooterPivot: {fileID: 7572150131224693469}
   intakePivot: {fileID: 7101749741854583323}
-  intakeDeploy: {fileID: 8024107007445086517}
+  intakeDeploy: {fileID: 8678922346801878967}
   leftIntakeRollerJoint: {fileID: 5387224939418560614}
   rightIntakeRollerJoint: {fileID: 7186971507311609959}
   leftIntakeSensor: {fileID: 2341728177175676982}
@@ -13011,56 +13010,7 @@ MonoBehaviour:
     angularSpeed: 0
   targetShooterAngle: 0
   targetIntakeAngle: 0
-  targetIntakeDistance: 0
   targetShootingForce: 0
---- !u!114 &8024107007445086517
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 2534371394911199621}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 20cb3794f26a4d04dab8b954d1f65ffa, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  stages:
-  - {fileID: 5398549416805330259}
-  elevatorType: 0
-  pidConstants:
-    kP: 10
-    kI: 0
-    kD: 0.1
-    Max: 1.98
-    Isaturation: 1
-  stagesPidConstants:
-    kP: 0.25
-    kI: 0
-    kD: 0.00001
-    Max: 2.25
-    Isaturation: 1
-  elevatorAxis: 1
-  flipped: 0
-  setStageOverrides:
-  - stageNum: 1
-    overrideAxis: 2
-    useStartingOffset: 1
-  stageHeight: 29
-  stageOverlap: 8
-  carriageHeight: 8
-  elevatorSound: {fileID: 0}
-  elevatorClip: {fileID: 8300000, guid: ae1ae9edf291fcf44b1aa0ebe48dd814, type: 3}
-  minSpeed: 5
-  maxSpeed: 60
-  soundPitchRange: {x: 1, y: 1.05}
-  soundVolumeRange: {x: 0.3, y: 0.5}
-  stageClickClip: {fileID: 0}
-  clickVolume: 0.1
-  clickSoundCooldown: 0.2
-  topClickOffset: 0.5
-  bottomClickOffset: 0.5
-  referenceTransform: {fileID: 0}
 --- !u!114 &2903388397744750583
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -48179,9 +48129,6 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 7407477690103884019}
-  - component: {fileID: 5865227791931682013}
-  - component: {fileID: 5164897894531636776}
-  - component: {fileID: 5398549416805330259}
   m_Layer: 0
   m_Name: Deploy
   m_TagString: Untagged
@@ -48198,7 +48145,7 @@ Transform:
   m_GameObject: {fileID: 8678922346801878967}
   serializedVersion: 2
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 0, y: 0, z: 0.000871}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children:
@@ -48206,172 +48153,6 @@ Transform:
   - {fileID: 2909442353981865148}
   m_Father: {fileID: 7322147396078081182}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!54 &5865227791931682013
-Rigidbody:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 8678922346801878967}
-  serializedVersion: 4
-  m_Mass: 1
-  m_Drag: 0
-  m_AngularDrag: 0.05
-  m_CenterOfMass: {x: 0, y: 0, z: 0}
-  m_InertiaTensor: {x: 1, y: 1, z: 1}
-  m_InertiaRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_IncludeLayers:
-    serializedVersion: 2
-    m_Bits: 0
-  m_ExcludeLayers:
-    serializedVersion: 2
-    m_Bits: 0
-  m_ImplicitCom: 1
-  m_ImplicitTensor: 1
-  m_UseGravity: 1
-  m_IsKinematic: 0
-  m_Interpolate: 0
-  m_Constraints: 0
-  m_CollisionDetection: 0
---- !u!153 &5164897894531636776
-ConfigurableJoint:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 8678922346801878967}
-  serializedVersion: 4
-  m_ConnectedBody: {fileID: 8921164627416285410}
-  m_ConnectedArticulationBody: {fileID: 0}
-  m_Anchor: {x: 0, y: 0, z: 0}
-  m_Axis: {x: -1, y: 0, z: 0}
-  m_AutoConfigureConnectedAnchor: 1
-  m_ConnectedAnchor: {x: 0, y: 0, z: 0}
-  m_SecondaryAxis: {x: 0, y: 1, z: 0}
-  m_XMotion: 0
-  m_YMotion: 0
-  m_ZMotion: 1
-  m_AngularXMotion: 0
-  m_AngularYMotion: 0
-  m_AngularZMotion: 0
-  m_LinearLimitSpring:
-    spring: 10000
-    damper: 0
-  m_LinearLimit:
-    limit: 0.001
-    bounciness: 0.2
-    contactDistance: 5
-  m_AngularXLimitSpring:
-    spring: 0
-    damper: 0
-  m_LowAngularXLimit:
-    limit: 0
-    bounciness: 0
-    contactDistance: 0
-  m_HighAngularXLimit:
-    limit: 0
-    bounciness: 0
-    contactDistance: 0
-  m_AngularYZLimitSpring:
-    spring: 0
-    damper: 0
-  m_AngularYLimit:
-    limit: 0
-    bounciness: 0
-    contactDistance: 0
-  m_AngularZLimit:
-    limit: 0
-    bounciness: 0
-    contactDistance: 0
-  m_TargetPosition: {x: 0, y: 0, z: 0}
-  m_TargetVelocity: {x: 0, y: 0, z: 0}
-  m_XDrive:
-    serializedVersion: 4
-    positionSpring: 0
-    positionDamper: 0
-    maximumForce: 3.4028233e+38
-    useAcceleration: 0
-  m_YDrive:
-    serializedVersion: 4
-    positionSpring: 0
-    positionDamper: 0
-    maximumForce: 3.4028233e+38
-    useAcceleration: 0
-  m_ZDrive:
-    serializedVersion: 4
-    positionSpring: 100000
-    positionDamper: 20000
-    maximumForce: 3.4028233e+38
-    useAcceleration: 0
-  m_TargetRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_TargetAngularVelocity: {x: 0, y: 0, z: 0}
-  m_RotationDriveMode: 0
-  m_AngularXDrive:
-    serializedVersion: 4
-    positionSpring: 9e+12
-    positionDamper: 9e+15
-    maximumForce: 3.4028233e+38
-    useAcceleration: 0
-  m_AngularYZDrive:
-    serializedVersion: 4
-    positionSpring: 0
-    positionDamper: 0
-    maximumForce: 3.4028233e+38
-    useAcceleration: 0
-  m_SlerpDrive:
-    serializedVersion: 4
-    positionSpring: 0
-    positionDamper: 0
-    maximumForce: 3.4028233e+38
-    useAcceleration: 0
-  m_ProjectionMode: 0
-  m_ProjectionDistance: 0.1
-  m_ProjectionAngle: 180
-  m_ConfiguredInWorldSpace: 0
-  m_SwapBodies: 0
-  m_BreakForce: Infinity
-  m_BreakTorque: Infinity
-  m_EnableCollision: 1
-  m_EnablePreprocessing: 1
-  m_MassScale: 1
-  m_ConnectedMassScale: 1
---- !u!114 &5398549416805330259
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 8678922346801878967}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 421beba0f51efa74ab0050387b64c5a1, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  brakeModeMultiplyer: 1
-  ignoreDisabledMode: 0
-  movementAudioClip: {fileID: 0}
-  audioErrorThreshold: 3
-  audioErrorDeltaThreshold: 25
-  movementAudioPitchRange: {x: 0.95, y: 1.1}
-  movementAudioVolumeRange: {x: 0.1, y: 0.25}
-  audioPitchSmoothSpeed: 8
-  audioVolumeSmoothSpeed: 8
-  audioResponseExponent: 0.75
-  debugPrint: 0
-  DebugErrorDeltaInt: 0
-  CurrentValue: 0
-  TargetValue: 0
-  OutputValue: 0
-  _startingPosition: {x: 0, y: 0, z: 0}
-  linearAxis: 0
-  useDifferentEncoderAxis: 0
-  encoderAxis: 0
-  flipDirection: 0
-  useStartingOffset: 0
-  angularAxis: 0
-  velocityAxis: 0
-  noWrap: 0
-  noWrapAngle: 0
 --- !u!1 &8689088300169225851
 GameObject:
   m_ObjectHideFlags: 0

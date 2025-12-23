@@ -7,7 +7,6 @@ namespace Prefabs.Reefscape.Robots.Mods._604B
     {
         [Tooltip("Degrees")] public float intakePivotAngle;
         [Tooltip("Degrees")] public float shooterPivotAngle;
-        [Tooltip("Inches")] public float intakeDeployDistance;
         [Tooltip("Newtons")] public float releaseForce;
     }
 }

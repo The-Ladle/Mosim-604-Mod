@@ -18,7 +18,7 @@ namespace Prefabs.Reefscape.Robots.Mods._604B
         [Header("Components")]
         [SerializeField] private GenericJoint shooterPivot;
         [SerializeField] private GenericJoint intakePivot;
-        [SerializeField] private GenericElevator intakeDeploy;
+        [SerializeField] private GameObject intakeDeploy;
         [SerializeField] private GenericRoller leftIntakeRollerJoint;
         [SerializeField] private GenericRoller rightIntakeRollerJoint;
         [SerializeField] private Transform leftIntakeSensor;
@@ -60,7 +60,6 @@ namespace Prefabs.Reefscape.Robots.Mods._604B
         [Header("Target Setpoints")]
         [SerializeField] private float targetShooterAngle;
         [SerializeField] private float targetIntakeAngle;
-        [SerializeField] private float targetIntakeDistance;
         [SerializeField] private float targetShootingForce;
 
         protected override void Start()
@@ -72,7 +71,6 @@ namespace Prefabs.Reefscape.Robots.Mods._604B
 
             targetShooterAngle = stowSetpoint.shooterPivotAngle;
             targetIntakeAngle = stowSetpoint.intakePivotAngle;
-            targetIntakeDistance = stowSetpoint.intakeDeployDistance;
     
             RobotGamePieceController.SetPreload(coralStowState);
 
@@ -95,7 +93,6 @@ namespace Prefabs.Reefscape.Robots.Mods._604B
         {
             intakePivot.SetTargetAngle(targetIntakeAngle);
             shooterPivot.SetTargetAngle(targetShooterAngle);
-            intakeDeploy.SetTarget(targetIntakeDistance);
 
             var canIntake = _coralController.currentStateNum == 0 && IntakeAction.IsPressed() && _coralController.currentStateNum == 0;
 
@@ -220,7 +217,6 @@ namespace Prefabs.Reefscape.Robots.Mods._604B
             targetShootingForce = setpoint.releaseForce;
             targetShooterAngle = setpoint.shooterPivotAngle;
             targetIntakeAngle = setpoint.intakePivotAngle;
-            targetIntakeDistance = setpoint.intakeDeployDistance;
         }
     }
 }
